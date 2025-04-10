@@ -1,0 +1,99 @@
+/* Fonte padrão e estilo do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('pizza-fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8f8f8;
+}
+
+/* Estilo do contêiner do formulário */
+.form-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 25px;
+    background-color: rgba(20, 20, 20, 0.9); /* escuro com transparência */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.2);
+}
+
+/* Estilo dos títulos do formulário */
+h3 {
+    text-align: center;
+    color: #FFD700; /* dourado */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c; /* vermelho vibrante */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo da página home */
+header {
+    text-align: center;
+    margin-top: 40px;
+    color: #FFD700;
+    text-shadow: 1px 1px 4px black;
+}
+
+header h1 {
+    color: #FFD700;
+}
+
+header p {
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+.menu, .promotions {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.95);
+    color: #ccc;
+}
