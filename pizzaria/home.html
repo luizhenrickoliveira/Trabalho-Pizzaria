@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo à Pizzaria Mestre da Pizza!</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .pizza {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .pizza img {
+            width: 120px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        #searchBar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Pizzaria Mestre da Pizza!</h1>
+        <p>Saboreie as melhores pizzas da cidade!</p>
+    </header>
+
+    <input type="text" id="searchBar" placeholder="Pesquisar pizza...">
+
+    <section class="menu">
+        <h2>Nosso Cardápio</h2>
+        <div id="pizzaList">
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Calabresa" alt="Pizza de Calabresa">
+                <p>Pizza de Calabresa</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Margherita" alt="Pizza Margherita">
+                <p>Pizza Margherita</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Portuguesa" alt="Pizza Portuguesa">
+                <p>Pizza Portuguesa</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Frango+Catupiry" alt="Pizza Frango com Catupiry">
+                <p>Pizza Frango com Catupiry</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Quatro+Queijos" alt="Pizza Quatro Queijos">
+                <p>Pizza Quatro Queijos</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Pepperoni" alt="Pizza de Pepperoni">
+                <p>Pizza de Pepperoni</p>
+            </div>
+            <div class="pizza">
+                <img src="https://via.placeholder.com/120?text=Vegetariana" alt="Pizza Vegetariana">
+                <p>Pizza Vegetariana</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="promotions">
+        <h2>Promoções da Semana</h2>
+        <p>Compre 1 pizza grande e ganhe 1 refrigerante grátis!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pizzaria Mestre da Pizza | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const pizzaItems = document.querySelectorAll('#pizzaList .pizza');
+
+        searchBar.addEventListener('input', function() {
+            const searchText = this.value.toLowerCase();
+            pizzaItems.forEach(item => {
+                const pizzaName = item.textContent.toLowerCase();
+                item.style.display = pizzaName.includes(searchText) ? 'flex' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
